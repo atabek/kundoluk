@@ -19,6 +19,16 @@ type Entry struct {
 	Kreading int
 	Rreading int
 	Creading int
+	Mreading int
+	Preading int
+	Technight int
+	Orozo int
+	Video int
+	Taspi int
+	Kaza int
+	Ezb int
+	Kop int
+	Sabak int
 }
 // [END greeting_struct]
 
@@ -72,6 +82,17 @@ func sign(w http.ResponseWriter, r *http.Request) {
 	kreading := r.FormValue("Kreading")
 	rreading := r.FormValue("Rreading")
 	creading := r.FormValue("Creading")
+	mreading := r.FormValue("Mreading")
+	preading := r.FormValue("Preading")
+	technight := r.FormValue("Technight")
+	orozo     := r.FormValue("Orozo")
+	video     := r.FormValue("Video")
+	taspi     := r.FormValue("Taspi")
+	kaza      := r.FormValue("Kaza")
+	ezb       := r.FormValue("Ezb")
+	kop       := r.FormValue("Kop")
+	sabak     := r.FormValue("Sabak")
+
 
 	// number of kreading
 	nkreading, err := strconv.Atoi(kreading)
@@ -94,12 +115,92 @@ func sign(w http.ResponseWriter, r *http.Request) {
                 return
 	}
 
+	// number of mreading
+	nmreading, err := strconv.Atoi(mreading)
+	if err != nil {
+		http.Error(w, err.Error() + " mreading", http.StatusInternalServerError)
+                return
+	}
+
+	// number of preading
+	npreading, err := strconv.Atoi(preading)
+	if err != nil {
+		http.Error(w, err.Error() + " preading", http.StatusInternalServerError)
+                return
+	}
+
+	// number of technight
+	ntechnight, err := strconv.Atoi(technight)
+	if err != nil {
+		http.Error(w, err.Error() + " technight", http.StatusInternalServerError)
+                return
+	}
+
+	// number of orozo
+	norozo, err := strconv.Atoi(orozo)
+	if err != nil {
+		http.Error(w, err.Error() + " orozo", http.StatusInternalServerError)
+                return
+	}
+
+	// number of video
+	nvideo, err := strconv.Atoi(video)
+	if err != nil {
+		http.Error(w, err.Error() + " video", http.StatusInternalServerError)
+                return
+	}
+
+	// number of video
+	ntaspi, err := strconv.Atoi(taspi)
+	if err != nil {
+		http.Error(w, err.Error() + " taspi", http.StatusInternalServerError)
+                return
+	}
+
+	// number of kaza
+	nkaza, err := strconv.Atoi(kaza)
+	if err != nil {
+		http.Error(w, err.Error() + " kaza", http.StatusInternalServerError)
+                return
+	}
+
+	// number of ezb
+	nezb, err := strconv.Atoi(ezb)
+	if err != nil {
+		http.Error(w, err.Error() + " ezb", http.StatusInternalServerError)
+                return
+	}
+
+	// number of kop
+	nkop, err := strconv.Atoi(kop)
+	if err != nil {
+		http.Error(w, err.Error() + " kop", http.StatusInternalServerError)
+                return
+	}
+
+	// number of sabak
+	nsabak, err := strconv.Atoi(sabak)
+	if err != nil {
+		http.Error(w, err.Error() + " sabak", http.StatusInternalServerError)
+                return
+	}
+
         e := Entry{
 		Author: author,
-                Kreading: nkreading,
+		Date:    time.Now(),                
+		Kreading: nkreading,
 		Rreading: nrreading,
 		Creading: ncreading,
-                Date:    time.Now(),
+                Mreading: nmreading,
+		Preading: npreading,
+		Technight: ntechnight,
+		Orozo:    norozo,
+		Video:    nvideo,
+		Taspi:    ntaspi,
+		Kaza:     nkaza,
+		Ezb:      nezb,
+		Kop:      nkop,
+		Sabak:    nsabak,
         }
         // We set the same parent key on every Greeting entity to ensure each Greeting
         // is in the same entity group. Queries across the single entity group
