@@ -16,49 +16,22 @@
 
 <h1>Logbook</h1>
 <form action="/sign" method="post">
-
 <div class="row">
-<div class="col-sm-12">
-<table class="table table-bordered">
-	<thead>
-		<tr>
-		<th>KK</th>
-		<th>RSL</th>
-		<th>CVN</th>
-		<th>Meal</th>
-		<th>PNT</th>
-		<th>THC</th>
-		<th>Orozo</th>
-		<th>Video</th>
-		<th>Taspi</th>
-		<th>Kaza</th>
-		<th>Ezb</th>
-		<th>Kop</th>
-		<th>Sabak</th>
-		</tr>
-	</thead>
-
-	<tbody>
-		<tr>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Kreading"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Rreading"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Creading"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Mreading"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Preading"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Technight"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Orozo"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Video"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Taspi"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Kaza"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Ezb"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Kop"></input></td>
-		      <td class="col-sm-1"><input class="col-sm-12" type="number" name="Sabak"></input></td>
-		</tr>
-	</tbody>
-</table>
-<input type="submit" value="Submit">
-</form>
+      <div class="col-md-1">KK<input class="col-sm-12" type="number" name="Kreading"></input></div>
+      <div class="col-md-1">RSL<input class="col-sm-12" type="number" name="Rreading"></input></div>
+      <div class="col-md-1">CVN<input class="col-sm-12" type="number" name="Creading"></input></div>
+      <div class="col-md-1">Meal<input class="col-sm-12" type="number" name="Mreading"></input></div>
+      <div class="col-md-1">PNT<input class="col-sm-12" type="number" name="Preading"></input></div>
+      <div class="col-md-1">THC<input class="col-sm-12" type="number" name="Technight"></input></div>
+      <div class="col-md-1">Orozo<input class="col-sm-12" type="number" name="Orozo"></input></div>
+      <div class="col-md-1">Video<input class="col-sm-12" type="number" name="Video"></input></div>
+      <div class="col-md-1">Taspi<input class="col-sm-12" type="number" name="Taspi"></input></div>
+      <div class="col-md-1">Kaza<input class="col-sm-12" type="number" name="Kaza"></input></div>
+      <div class="col-md-1">Kop<input class="col-sm-12" type="number" name="Kop"></input></div>
+      <div class="col-md-1">Sabak<input class="col-sm-12" type="number" name="Sabak"></input></div>
 </div>
+<input type="submit" class="btn btn-primary" value="Submit">
+</form>
 </div>
 </div>
 
@@ -79,7 +52,6 @@
 			<th>Video</th>
 			<th>Taspi</th>
 			<th>Kaza</th>
-			<th>Ezb</th>
 			<th>Kop</th>
 			<th>Sabak</th>
 		</tr>
@@ -99,7 +71,6 @@
 			<td>{{.Video}}</td>
 			<td>{{.Taspi}}</td>
 			<td>{{.Kaza}}</td>
-			<td>{{.Ezb}}</td>
 			<td>{{.Kop}}</td>
 			<td>{{.Sabak}}</td>
 		</tr>
